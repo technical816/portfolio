@@ -350,6 +350,10 @@ emailjs.init("YwJHgT8Nolw6w4Gcv");
 const form = document.querySelector("#contact-form");
 
 form.addEventListener("submit", function (e) {
+    const btn = form.querySelector("button");
+
+btn.innerHTML = "⏳ Sending...";
+btn.disabled = true;
     e.preventDefault();
 
     emailjs.sendForm(
@@ -358,13 +362,47 @@ form.addEventListener("submit", function (e) {
         this
     ).then(() => {
 
-        alert("✅ Message Sent Successfully!");
+        btn.innerHTML = "✅ Message Sent";
+       const toast = document.getElementById("toast");
 
+toast.innerHTML = "✅ Message Sent Successfully";
+
+toast.classList.add("show");
+
+setTimeout(()=>{
+
+toast.classList.remove("show");
+
+},3000);
+       setTimeout(() => {
+
+btn.innerHTML = "Send Message";
+
+btn.disabled = false;
+
+},2000);
+       
         form.reset();
 
     }, (error) => {
 
-        alert("❌ Failed to send message.");
+      btn.innerHTML = "❌ Try Again";
+const toast = document.getElementById("toast");
+
+toast.innerHTML="❌ Failed to Send";
+
+toast.style.background="#d50000";
+
+toast.classList.add("show");
+
+setTimeout(()=>{
+
+toast.classList.remove("show");
+
+toast.style.background="#00c853";
+
+},3000);
+btn.disabled = false;
 
         console.log(error);
 
