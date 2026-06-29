@@ -344,3 +344,29 @@ console.log("%cSUBHU CYBER PORTFOLIO",
 console.log("%cWebsite Loaded Successfully 🚀",
 
 "color:#00d9ff;font-size:14px;");
+
+emailjs.init("YwJHgT8Nolw6w4Gcv");
+
+const form = document.querySelector("#contact-form");
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_9zx4c6z",
+        "template_x29mspo",
+        this
+    ).then(() => {
+
+        alert("✅ Message Sent Successfully!");
+
+        form.reset();
+
+    }, (error) => {
+
+        alert("❌ Failed to send message.");
+
+        console.log(error);
+
+    });
+});
