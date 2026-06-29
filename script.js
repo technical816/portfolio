@@ -408,3 +408,63 @@ btn.disabled = false;
 
     });
 });
+
+/* ===========================
+   Hacker Boot Loader
+=========================== */
+
+const bootText = document.getElementById("boot-text");
+
+const bootLines = [
+
+"Initializing Portfolio...",
+
+"Loading Security Modules...",
+
+"Connecting Database...",
+
+"Checking Network...",
+
+"Loading Projects...",
+
+"Access Granted ✅"
+
+];
+
+let line = 0;
+
+function hackerBoot(){
+
+if(line < bootLines.length){
+
+bootText.textContent = bootLines[line];
+
+line++;
+
+setTimeout(hackerBoot,700);
+
+}else{
+
+setTimeout(()=>{
+
+const loader=document.querySelector(".loader");
+
+loader.style.opacity="0";
+
+setTimeout(()=>{
+
+loader.style.display="none";
+
+},1000);
+
+},800);
+
+}
+
+}
+
+window.addEventListener("load",()=>{
+
+setTimeout(hackerBoot,500);
+
+});
