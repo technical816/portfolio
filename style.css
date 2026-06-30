@@ -1361,3 +1361,29 @@ background:#ffffff;
 color:#111;
 border:1px solid #ddd;
 }
+
+/* ===========================
+   Version Badge
+=========================== */
+
+.version-badge{
+
+display:inline-block;
+
+margin-top:10px;
+
+padding:6px 14px;
+
+border-radius:20px;
+
+background:#00ff88;
+
+color:#000;
+
+font-size:12px;
+
+font-weight:bold;
+
+letter-spacing:1px;
+
+}
