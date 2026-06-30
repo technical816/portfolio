@@ -1320,3 +1320,44 @@ background:#00ff88;
 color:#000;
 transform:scale(1.05);
 }
+
+/* ===========================
+   Theme Toggle Button
+=========================== */
+
+.theme-btn{
+width:45px;
+height:45px;
+border:none;
+border-radius:50%;
+background:#00ff88;
+color:#000;
+font-size:20px;
+cursor:pointer;
+margin-right:15px;
+transition:.3s;
+box-shadow:0 0 15px rgba(0,255,136,.5);
+}
+
+.theme-btn:hover{
+transform:rotate(180deg) scale(1.1);
+background:#00cc6a;
+}
+
+body.light-mode{
+background:#f5f5f5;
+color:#111;
+transition:.5s;
+}
+
+body.light-mode section{
+background:transparent;
+}
+
+body.light-mode .project-card,
+body.light-mode .service-card,
+body.light-mode .stat-box{
+background:#ffffff;
+color:#111;
+border:1px solid #ddd;
+}
