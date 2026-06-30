@@ -1281,3 +1281,42 @@ opacity:0;
 }
 
 }
+
+/* ===========================
+   Project Tech Stack
+=========================== */
+
+.project-tag{
+display:inline-block;
+padding:5px 12px;
+background:#00ff88;
+color:#000;
+font-size:12px;
+font-weight:bold;
+border-radius:20px;
+margin-bottom:15px;
+}
+
+.tech-stack{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:15px;
+margin-bottom:20px;
+}
+
+.tech-stack span{
+background:rgba(0,255,136,.12);
+border:1px solid #00ff88;
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
+color:#00ff88;
+transition:.3s;
+}
+
+.tech-stack span:hover{
+background:#00ff88;
+color:#000;
+transform:scale(1.05);
+}
